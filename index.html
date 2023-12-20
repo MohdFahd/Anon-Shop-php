@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sample Form</title>
+    <script>
+    function validateForm() {
+        var name = document.forms["myForm"]["name"].value;
+        var email = document.forms["myForm"]["email"].value;
+
+        if (name == "" || email == "") {
+            alert("Both name and email must be filled out");
+            return false;
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <h2>Sample Form</h2>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
